@@ -1,11 +1,15 @@
-export function initializeExpandableTable() {
-    const toggleAllButton = document.getElementById("toggleAll");
-    const toggleButtons = document.querySelectorAll(".toggle-row");
+/**
+ * Inicializa la tabla expandible con jQuery.
+ * @param {JQuery<HTMLElement>} container - Elemento contenedor donde buscar la tabla.
+ */
+export function initializeExpandableTable(container = document) {
+    const toggleAllButton = container.querySelector("#toggleAll");
+    const toggleButtons = container.querySelectorAll(".toggle-row");
     if (toggleAllButton) {
         toggleAllButton.addEventListener("click", function () {
             const isExpanded = this.getAttribute("data-expanded") === "true";
             this.setAttribute("data-expanded", (!isExpanded).toString());
-            document.querySelectorAll(".detail-row").forEach(row => {
+            container.querySelectorAll(".detail-row").forEach(row => {
                 row.style.display = isExpanded ? "none" : "table-row";
             });
         });
@@ -20,5 +24,3 @@ export function initializeExpandableTable() {
         });
     });
 }
-// 🔹 **Ejecuta automáticamente cuando el script se carga**
-initializeExpandableTable();

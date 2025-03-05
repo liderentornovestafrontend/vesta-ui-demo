@@ -3,19 +3,7 @@
    ====================================== */
    @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 
-   :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --text-color: #333;
-    --background-color: #f8f9fa;
-    --border-radius: 0.5rem;
-    --menu-bg: #2c3e50;
-    --menu-hover: #34495e;
-    --menu-icon-size: 2rem;
-    --menu-width: 5rem;
-    --menu-expanded-width: 15rem;
-    --transition-speed: 0.3s;
-}
+
 
 * {
     margin: 0;

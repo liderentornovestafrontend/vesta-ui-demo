@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url("./table.css");
+@import url("./menu.css");
 
 /* ======================================
    📌 VESTA UI - Estilos Base (Regla de 8px + Responsive)

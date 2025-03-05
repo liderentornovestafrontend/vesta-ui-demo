@@ -1,5 +1,13 @@
 {
+  "name": "vesta-ui",
+  "version": "1.0.0",
+  "scripts": {
+    "build-ts": "tsc --declaration --declarationMap --emitDeclarationOnly false",
+    "build-css": "copy /b src\\styles\\*.css dist\\vesta-ui.css && cleancss -o dist\\vesta-ui.min.css dist\\vesta-ui.css",
+    "build": "npm run build-ts && npm run build-css"
+  },
   "devDependencies": {
-    "@types/jquery": "^3.5.32"
+    "@types/jquery": "^3.5.32",
+    "clean-css-cli": "^5.3.3"
   }
 }
