@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Paleta de colores */
+:root {
+    --primary-color: #004A7C;
+    --secondary-color: #666666;
+    --background-color: #F2F2F2;
+    --text-color: #333333;
+    --success-color: #28A745;
+    --error-color: #DC3545;
+    --table-row-alt: #f9f9f9;
+    --table-row-hover: #e0f7fa;
+}
+
+/* Excel Style Table */
+.table-container {
+    width: 100%;
+    height: 24rem; /* Ajusta el alto deseado para el contenedor */
+    min-height: 24rem;
+    overflow: auto;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.xls_style-excel-table {
+    width: 100%;
+    border-collapse: collapse; /* 🔹 Une los bordes de las celdas */
+}
+
+
+.xls_1P {
+    width: 1%;
+}
+.xls_2P .ImgeExpan .Contador{
+    width: 2%;
+}
+.xls_5P {
+    width: 5%;
+}
+.xls_10P {
+    width: 10%;
+}
+.xls_15P {
+    width: 15%;
+}
+.xls_20P {
+    width: 20%;
+}
+.xls_30P {
+    width: 30%;
+}
+.xls_50P {
+    width: 50%;
+}
+
+.xls_70P {
+    width: 70%;
+}
+
+
+.xls_80P {
+    width: 90%;
+}
+
+
+
+
+    .xls_item td input {
+        max-width: 60px;
+    }
+
+    /*.xls_style-excel-table tbody {
+            display: block;*/ /* Establece un bloque para el cuerpo */
+    /*min-height: 20rem;*/ /* Altura mínima para el cuerpo */
+    /*max-height: calc(100% - 40px);*/ /* Resta la altura de los encabezados */
+    /*overflow: auto;*/ /* Habilita el scroll para el cuerpo */
+    /*}*/
+
+
+    .xls_style-excel-table tfoot {
+        
+        
+
+        position: sticky;
+        bottom: 0;
+        background-color: #f0f0f0; /* Cambia el color de fondo del footer */
+        font-weight: bold;
+    }
+
+.fixed-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #2980BA; /* Color de fondo para los encabezados */
+    color: white; /* Color de texto para los encabezados */
+    border: 1px solid #ddd;
+
+}
+
+.bordered-header {
+    border: 1px solid #ddd; /* Añade los bordes a los encabezados */
+}
+
+.xls_style-excel-table th {
+    background-color: #1565C0;
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: center;
+    color: white;
+    font-family: "Calibri", sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    z-index: 3; /* Coloca el div detrás del thead */
+}
+
+.checkbox-label {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    vertical-align: middle; /* Alinea verticalmente con el checkbox */
+}
+
+.xls_style-excel-table td {
+    border: 1px solid #ddd;
+    padding: var(--spacing-xs); /* 8px */
+    font-family: "Calibri", sans-serif;
+    font-size: 0.875rem; /* Aproximadamente 14px, ajustado con rem */
+    margin: 0rem;
+  
+}
+
+/* 📌 Ajustes Responsivos */
+@media (max-width: 1024px) {
+    .xls_style-excel-table td {
+        padding: calc(var(--spacing-xs) * 0.75); /* Reduce el padding un 25% */
+        font-size: 0.8125rem; /* Aproximadamente 13px */
+    }
+}
+
+@media (max-width: 768px) {
+    .xls_style-excel-table td {
+        padding: calc(var(--spacing-xs) * 0.5); /* Reduce el padding un 50% */
+        font-size: 0.75rem; /* Aproximadamente 12px */
+    }
+}
+
+@media (max-width: 480px) {
+    .xls_style-excel-table td {
+        padding: calc(var(--spacing-xs) * 0.25); /* Reduce el padding un 75% */
+        font-size: 0.6875rem; /* Aproximadamente 11px */
+    }
+}
+
+
+.xls_father {
+    font-weight: bold;
+}
+
+.xls_child {
+    background-color: #f0f0f0;
+}
+
+.xls_number {
+   text-align:right;
+}
+
+.xls_center {
+    text-align: center;
+}
+
+.xls_style-row-header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+
+.xls_style-excel-table td:first-child::before {
+    content: attr(data-row-number);
+    position: absolute;
+    left: 5px;
+    color: #007bff;
+}
+
+.xls_style-excel-table td:first-child {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding-left: 5px;
+    position: relative;
+}
+
+
+
+.xls_style-excel-table td input {
+    border: none;
+    outline: none;
+}
+
+
+
+.excel_selected {
+    border: 1px solid #70ad47;
+    background-color: #c9dde1;
+}
+
+tr:hover {
+    border: 1px solid #70ad47;
+    background-color: #e0f4da;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+}
+
+.file-upload-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    font-family: "Calibri", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+   
+}
+
+.file-upload-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+input:invalid {
+    border: 1px solid red;
+    background-color: #ffcccc;
+}
+
+select:invalid {
+    border: 1px solid red;
+    background-color: #ffcccc;
+}
+
+.file {
+    display: none;
+}
+
+.xls_style-excel-table td.input.align-right-with-decimals {
+    text-align: right;
+}
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(888, 888, 8888, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/* Estilo para los campos de filtro */
+.filter-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 4px;
+    font-family: "Calibri", sans-serif;
+    font-size: 12px;
+}
+
+/* Estilo para los campos de filtro en la fila de encabezados */
+.xls_style-excel-table th .filter-input {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Ajuste de tamaño para la primera columna de filtros */
+.xls_style-excel-table th:first-child .filter-input {
+    width: 80px;
+}
+
+/* Ajuste de tamaño para la segunda columna de filtros */
+.xls_style-excel-table th:nth-child(2) .filter-input {
+    width: 110px;
+}
+
+.excel_selected {
+    background-color: rgba(0, 120, 255, 0.3);
+    transition: background-color 0.3s;
+}
+
+
+.xls_style-excel-table tr.selected {
+    background-color: rgba(0, 120, 255, 0.3);
+    transition: background-color 0.3s;
+}
+
+
+.header-background {
+    position: sticky; /* Cambio a sticky para que el fondo blanco quede fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px; /* Ajusta la altura del thead */
+    background-color: white; /* Color de fondo blanco */
+    z-index: 2; /* Coloca el div detrás del thead */
+}
+
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1565C0;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.title {
+    flex: 1;
+}
+
+.options {
+    display: flex;
+   
+}
+
+.option-button {
+    padding: 0.4rem;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.separator {
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    margin: 0 10px;
+}
+
+.input-error {
+    background-color: yellow;
+}
+
+.input-normal {
+    background-color: white;
+}
+
+
+.xls_select {
+    height: 1.5rem;
+    min-width: 250px;
+    padding: 0.1rem;
+}
+
+.context-menu {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    z-index: 9999;
+}
+
+    .context-menu ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .context-menu li {
+        padding: 8px 12px;
+    }
+
+    .context-menu a {
+        text-decoration: none;
+        color: #333;
+    }
+
+        .context-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+
+
+.popupcontext {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    z-index: 1000;
+}
+
+/* Estilos para el fondo oscuro */
+.popupcontext-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+.menu {
+    height: calc(100% - 55px); /* Ajusta el alto para debajo de la barra de navegación con margen superior */
+    width: 25%;
+    position: fixed;
+    top: 55px; /* Posición debajo de la barra de navegación */
+    left: -25%; /* Inicialmente escondido */
+    background-color: #FFFFFF;
+    border-right: 1px solid var(--secondary-color);
+    transition: 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    padding-top: 0.1rem;
+}
+
+    .menu.open {
+        left: 0; /* Mostrar el menú */
+    }
+
+    .menu .closebtn {
+        font-size: 24px;
+        color: var(--primary-color);
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+.menu-content {
+    padding: 20px;
+}
+
+/* Botón de menú (oculta cuando el menú está activo) */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 70px; /* Ajusta la posición debajo de la barra de navegación */
+    left: 0px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0px;
+    z-index: 1001;
+    display: block;
+}
+
+.menu.open ~ .openbtn {
+    display: none; /* Ocultar el botón cuando el menú está activo */
+}
+
+/* Formularios dentro del menú */
+.menu form {
+    margin: 0;
+}
+
+.menu label {
+    display: block;
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.menu input, .menu select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+    .menu input:focus, .menu select:focus {
+        border-color: var(--primary-color);
+        outline: none;
+    }
+
+.menu .btn-submit {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+    .menu .btn-submit:hover {
+        background-color: #003D6D;
+    }
+
+/* Ajustes del contenido principal */
+.main_content {
+    margin-left: 0; /* Ajuste inicial para cuando el menú está escondido */
+    padding: 20px;
+    margin-top: 50px; /* Espacio para la barra de navegación */
+    width: 100%; /* Inicialmente ocupa todo el ancho disponible */
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+    .content.shift {
+        margin-left: 250px; /* Espacio para el menú cuando está activo */
+        width: calc(100% - 250px); /* Ancho restante para el contenido */
+    }
+
+/* Tema oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+    body.dark-mode .menu {
+        background-color: #333333;
+        border-right: 1px solid #444444;
+    }
+
+        body.dark-mode .menu .closebtn {
+            color: #BB86FC;
+        }
+
+        body.dark-mode .menu input, body.dark-mode .menu select {
+            background-color: #444444;
+            color: #FFFFFF;
+            border: 1px solid #555555;
+        }
+
+        body.dark-mode .menu .btn-submit {
+            background-color: #BB86FC;
+        }
+
+    body.dark-mode .content {
+        background-color: #121212;
+    }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .menu {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+        .content.shift {
+            margin-left: 0;
+            width: calc(100% - 200px);
+        }
+
+    .openbtn {
+        font-size: 20px;
+    }
+}
+
+/*MENU 2*/
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+#menu {
+    width: 280px;
+    transition: width 0.3s ease;
+    position: relative;
+    padding-top: 0.1rem;
+    background-color:white;
+}
+
+    #menu.minimized {
+        width: 40px;
+        
+    }
+
+#main {
+    padding:1rem;
+    padding-top:0.1rem;
+    flex-grow: 1;
+    background-color: #eaeaea;
+    transition: margin-right 0.3s ease;
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: 5px;
+    background-color: #1565C0;
+    border: none;
+    color: white;
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+    transition: left 0.3s ease, right 0.3s ease;
+    right: 7px;
+}
+
+.menu.open .toggle-button {
+    right: 10px; /* Botón alineado a la derecha cuando el menú está abierto */
+    left: auto; /* Eliminar alineación a la izquierda */
+}
+
+.menu.minimized .toggle-button {
+
+    right: 5px; /* Eliminar alineación a la derecha */
+}
+
+.menu-content {
+    padding: 20px;
+    padding-top:5px;
+}
+
+    .menu-content a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+    }
+
+        .menu-content a:hover {
+            background-color: #ddd;
+        }
+
+#menu.minimized .menu-content {
+    display: none;
+}
+
+
+.xls_filter-section {
+    margin-top: 10px;
+}
+
+.xls_filter-menu {
+    margin: 1px;
+}
+
+    .xls_filter-menu label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    .xls_filter-menu select {
+        width: 100%;
+        padding: 5px;
+    }
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.xls_select_menu {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+
+/* Estilo básico para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+
+.sap-loading-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sap-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #055492;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+.sap-loading-message {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}

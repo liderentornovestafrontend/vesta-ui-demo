@@ -1,0 +1,139 @@
+/* ======================================
+   📌 VESTA UI - Menú Lateral Avanzado
+   ====================================== */
+   @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+
+   :root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+    --border-radius: 0.5rem;
+    --menu-bg: #2c3e50;
+    --menu-hover: #34495e;
+    --menu-icon-size: 2rem;
+    --menu-width: 5rem;
+    --menu-expanded-width: 15rem;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--menu-width);
+    height: 100vh;
+    background: var(--menu-bg);
+    padding: 1rem 0;
+    transition: width var(--transition-speed) ease-in-out;
+    overflow-y: auto;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.expanded {
+    width: var(--menu-expanded-width);
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--menu-hover);
+    border-radius: 5px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: background var(--transition-speed);
+}
+
+.menu li:hover {
+    background: var(--menu-hover);
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.menu li svg {
+    width: var(--menu-icon-size);
+    height: var(--menu-icon-size);
+    fill: white;
+}
+
+.menu-text {
+    display: none;
+    transition: opacity var(--transition-speed) ease-in-out;
+}
+
+.sidebar.expanded .menu-text {
+    display: inline-block;
+    opacity: 1;
+}
+
+.toggle-menu, .toggle-fixed {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.toggle-fixed {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content {
+    margin-left: var(--menu-width);
+    padding: 2rem;
+    transition: margin-left var(--transition-speed) ease-in-out;
+    width: 100%;
+}
+
+.sidebar.expanded ~ .content {
+    margin-left: var(--menu-expanded-width);
+}
+
+.sidebar.hidden {
+    width: 0;
+}
+
+.sidebar.hidden ~ .content {
+    margin-left: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 4rem;
+    }
+    
+    .sidebar.expanded {
+        width: 12rem;
+    }
+}

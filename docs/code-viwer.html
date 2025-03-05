@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Código - Vesta UI</title>
+
+    <link rel="stylesheet" href="../src/components/codeviwer/code-viewer.css">
+</head>
+<body>
+
+    <h2>Ejemplo de Código con Prism.js</h2>
+
+    <div class="code-container">
+        <button class="copy-btn">Copiar Código</button>
+        <pre class="line-numbers"><code class="language-html">
+&lt;button class="btn btn-primary"&gt;Clic aquí&lt;/button&gt;
+&lt;script src="app.js"&gt;&lt;/script&gt;
+        </code></pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" defer></script>
+    <script type="module">
+        import { initializeCodeViewer } from "../components/code-viewer.js";
+        initializeCodeViewer();
+    </script>
+
+</body>
+</html>
