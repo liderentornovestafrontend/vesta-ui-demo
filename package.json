@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "scripts": {
     "build-ts": "tsc --declaration --declarationMap --emitDeclarationOnly false",
-    "build-css": "copy /b src\\styles\\*.css dist\\vesta-ui.css && cleancss -o dist\\vesta-ui.min.css dist\\vesta-ui.css",
-    "build": "npm run build-ts && npm run build-css"
+    "build-css": "copy /b src\\styles\\*.css dist\\styles\\vesta-ui.css && cleancss -o dist\\styles\\vesta-ui.min.css dist\\styles\\vesta-ui.css",
+    "build-icons": "xcopy /E /I /Y src\\icons dist\\icons",
+
+    "build": "npm run build-ts && npm run build-css && npm run build-icons"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.32",
     "clean-css-cli": "^5.3.3"
   },
   "dependencies": {
-   
+    
   }
 }
