@@ -26,3 +26,5 @@ Thumbs.db
 __pycache__/
 *.pyc
 *.pyo
+
+# Ignorar archivos de dependencias de Java
