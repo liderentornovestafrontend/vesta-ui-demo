@@ -1,0 +1,136 @@
+/* ======================================
+   📌 VESTA UI - Estilos Base (Regla de 8px + Responsive)
+   ====================================== */
+
+   @import "./base/variables.css";
+   @import "./base/icons.css";
+   @import "./base/form.css";
+   @import "./component/menus.css";
+   @import "./component/tablexls.css";
+   
+
+/* Títulos */
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.125rem;
+    margin-left: var(--spacing-md);
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* Navbar */
+.navbar {
+    background: var(--primary-color);
+    padding: var(--spacing-sm);
+    color: white;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-sm);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--spacing-xs);
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+/* Componentes */
+.component-example {
+    background: white;
+    padding: var(--spacing-md);
+    margin: var(--spacing-md);
+    border-radius: var(--spacing-xs);
+    box-shadow: 0px var(--spacing-xs) var(--spacing-xs) rgba(0, 0, 0, 0.1);
+}
+
+.preview {
+    padding: var(--spacing-xs);
+    background: #f1f1f1;
+    text-align: center;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Visor de Código */
+.code-container {
+    position: relative;
+    background: #272822;
+    padding: var(--spacing-sm);
+    border-radius: var(--spacing-xs);
+    overflow-x: auto;
+}
+
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: var(--spacing-sm);
+    border-radius: var(--spacing-xs);
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.code-container button.copy-btn {
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--spacing-xs);
+    background: #444;
+    color: white;
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-xs);
+    border-radius: var(--spacing-xs);
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.code-container button.copy-btn:hover {
+    background: #666;
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+    .container {
+        width: 95%;
+        padding: var(--spacing-sm);
+    }
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}

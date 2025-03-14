@@ -1,0 +1,79 @@
+
+/* Iconos */
+.vesta-icon {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem; /* 24px en rem */
+    height: 1.5rem;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: red; /* Cambia el color del SVG */
+    -webkit-mask-image: url('icono.svg'); /* Soporte para navegadores Webkit */
+    mask-image: url('icono.svg'); /* Aplica la máscara del SVG */
+    mask-size: cover;
+}
+
+
+.vesta-icon-white {
+    color: white;
+}
+
+.vesta-icon-black {
+    color: black;
+}
+
+.vesta-icon-x { width: 0.5rem; height: 0.5rem; }   /* 8px */
+.vesta-icon-1x { width: 0.5rem; height: 0.5rem; }   /* 8px */
+.vesta-icon-2x { width: 1rem; height: 1rem; }     /* 16px */
+.vesta-icon-3x { width: 1.5rem; height: 1.5rem; } /* 24px */
+.vesta-icon-4x { width: 2rem; height: 2rem; }     /* 32px */
+.vesta-icon-5x { width: 2.5rem; height: 2.5rem; } /* 40px */
+.vesta-icon-6x { width: 3rem; height: 3rem; }     /* 48px */
+
+
+
+/* Íconos Outline */
+.vesta-academic-cap-outline { background-image: url('../../icons/24/white/academic-cap.svg'); }
+.vesta-adjustments-horizontal-outline { background-image: url('./icons/24/outline/adjustments-horizontal.svg'); }
+.vesta-adjustments-vertical-outline { background-image: url('./icons/24/outline/adjustments-vertical.svg'); }
+.vesta-archive-box-arrow-down-outline { background-image: url('./icons/24/outline/archive-box-arrow-down.svg'); }
+.vesta-archive-box-x-mark-outline { background-image: url('./icons/24/outline/archive-box-x-mark.svg'); }
+.vesta-archive-box-outline { background-image: url('./icons/24/outline/archive-box.svg'); }
+.vesta-arrow-down-circle-outline { background-image: url('./icons/24/outline/arrow-down-circle.svg'); }
+.vesta-arrow-down-left-outline { background-image: url('./icons/24/outline/arrow-down-left.svg'); }
+.vesta-arrow-down-on-square-stack-outline { background-image: url('./icons/24/outline/arrow-down-on-square-stack.svg'); }
+.vesta-arrow-down-on-square-outline { background-image: url('./icons/24/outline/arrow-down-on-square.svg'); }
+.vesta-arrow-down-right-outline { background-image: url('./icons/24/outline/arrow-down-right.svg'); }
+.vesta-arrow-down-tray-outline { background-image: url('./icons/24/outline/arrow-down-tray.svg'); }
+.vesta-arrow-down-outline { background-image: url('./icons/24/outline/arrow-down.svg'); }
+.vesta-arrow-left-circle-outline { background-image: url('./icons/24/outline/arrow-left-circle.svg'); }
+.vesta-arrow-left-end-on-rectangle-outline { background-image: url('./icons/24/outline/arrow-left-end-on-rectangle.svg'); }
+.vesta-arrow-left-on-rectangle-outline { background-image: url('./icons/24/outline/arrow-left-on-rectangle.svg'); }
+.vesta-arrow-left-start-on-rectangle-outline { background-image: url('./icons/24/outline/arrow-left-start-on-rectangle.svg'); }
+.vesta-arrow-left-outline { background-image: url('./icons/24/outline/arrow-left.svg'); }
+/* Agrega aquí los demás íconos outline */
+
+/* Íconos Solid */
+.vesta-academic-cap-solid { background-image: url('.icons/24/solid/academic-cap.svg'); }
+.vesta-adjustments-horizontal-solid { background-image: url('./icons/24/solid/adjustments-horizontal.svg'); }
+.vesta-adjustments-vertical-solid { background-image: url('./icons/24/solid/adjustments-vertical.svg'); }
+.vesta-archive-box-arrow-down-solid { background-image: url('./icons/24/solid/archive-box-arrow-down.svg'); }
+.vesta-archive-box-x-mark-solid { background-image: url('./icons/24/solid/archive-box-x-mark.svg'); }
+.vesta-archive-box-solid { background-image: url('./icons/24/solid/archive-box.svg'); }
+.vesta-arrow-down-circle-solid { background-image: url('./icons/24/solid/arrow-down-circle.svg'); }
+.vesta-arrow-down-left-solid { background-image: url('./icons/24/solid/arrow-down-left.svg'); }
+.vesta-arrow-down-on-square-stack-solid { background-image: url('./icons/24/solid/arrow-down-on-square-stack.svg'); }
+.vesta-arrow-down-on-square-solid { background-image: url('./icons/24/solid/arrow-down-on-square.svg'); }
+.vesta-arrow-down-right-solid { background-image: url('./icons/24/solid/arrow-down-right.svg'); }
+.vesta-arrow-down-tray-solid { background-image: url('./icons/24/solid/arrow-down-tray.svg'); }
+.vesta-arrow-down-solid { background-image: url('./icons/24/solid/arrow-down.svg'); }
+.vesta-arrow-left-circle-solid { background-image: url('./icons/24/solid/arrow-left-circle.svg'); }
+.vesta-arrow-left-end-on-rectangle-solid { background-image: url('./icons/24/solid/arrow-left-end-on-rectangle.svg'); }
+.vesta-arrow-left-on-rectangle-solid { background-image: url('./icons/24/solid/arrow-left-on-rectangle.svg'); }
+.vesta-arrow-left-start-on-rectangle-solid { background-image: url('./icons/24/solid/arrow-left-start-on-rectangle.svg'); }
+.vesta-arrow-left-solid { background-image: url('./icons/24/solid/arrow-left.svg'); }
+/* Agrega aquí los demás íconos solid */

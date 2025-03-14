@@ -1,0 +1,28 @@
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar archivos de dependencias
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Ignorar archivos de compilación y distribución
+build/
+
+# Ignorar configuraciones de entornos locales
+.env
+.env.local
+.env.development
+.env.production
+
+# Ignorar cachés del sistema y editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Ignorar archivos de dependencias de Python
+__pycache__/
+*.pyc
+*.pyo

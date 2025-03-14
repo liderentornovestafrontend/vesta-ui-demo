@@ -1,0 +1,104 @@
+@import url('variables.css'); /* Importa variables de color y espaciado */
+
+/* Botones */
+button {
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: var(--Primary100);
+    border-radius: var(--border-radius-m);
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #469ad6;
+}
+
+/* Tamaños de botones */
+.button-lg {
+    font-size: 16px;
+    height: 52px;
+    width: 160px;
+}
+
+.button-md {
+    font-size: 14px;
+    height: 42px;
+    width: 140px;
+}
+
+.button-sm {
+    font-size: 12px;
+    height: 32px;
+    width: 100px;
+}
+
+/* Iconos */
+
+/* Inputs */
+input {
+    width: 296px;
+    height: 40px;
+    /* border-radius: var(--border-radius-m); */
+    padding: 2px;
+    gap: 2px;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    background-color: var(--base-white);
+    color: #333;
+    font-size: 14px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #469ad6;
+}
+
+/* Select */
+select {
+    width: 204px;
+    height: 36px;
+    min-height: 36px;
+    border-radius: var(--border-radius-m);
+    justify-content: space-between;
+    padding-top: var(--spacing-s);
+    padding-right: var(--spacing-sm);
+    padding-bottom: var(--spacing-s);
+    padding-left: var(--spacing-sm);
+    border: 1px solid var(--primary-color);
+    background-color: var(--base-white);
+    font-size: 14px;
+}
+
+.select:focus {
+    outline: none;
+    border-color: #469ad6;
+}
+
+
+/* Estilos generales para labels */
+.label-input {
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: bold;
+    color: var(--header-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Tamaño L (Grande) */
+.label-input-lg {
+    font-size: 16px;
+}
+
+/* Tamaño M (Mediano) */
+.label-input-md {
+    font-size: 14px;
+}
+
+/* Tamaño S (Pequeño) */
+.label-input-sm {
+    font-size: 12px;
+}
