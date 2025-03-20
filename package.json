@@ -2,16 +2,16 @@
   "name": "vesta-ui",
   "version": "1.0.0",
   "description": "Librería de UX/UI independiente de frameworks",
-"scripts": {
-  "build": "node build.js",
-  "update:icons": "node update-icons.js",
-  "start": "npx http-server ./ -p 0",
-  "deploy:dist": "cd dist && git add . && git commit -m 'Actualizando dist en GitHub' && git push origin main"
-}
-
-,
+  "scripts": {
+    "build": "node build.js",
+    "watch": "nodemon --watch src --ext js,css,html --exec \"npm run build\"",
+    "update:icons": "node update-icons.js",
+    "start": "npx live-server dist --port=3000 --watch=dist",
+    "deploy:dist": "cd dist && git add . && git commit -m 'Actualizando dist en GitHub' && git push origin main"
+  },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.9"
   },
   "dependencies": {
     "@types/jquery": "^3.5.32",
