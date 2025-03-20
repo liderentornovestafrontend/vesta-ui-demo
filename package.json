@@ -2,29 +2,14 @@
   "name": "vesta-ui",
   "version": "1.0.0",
   "description": "Librería de UX/UI independiente de frameworks",
-  "scripts": {
-    "clean": "rimraf dist",
-    "compile:ts": "tsc --outDir dist",
-    "copy:icons": "cpy src/icons/**/* dist/icons/ --parents",
-    "build:css": "postcss src/styles/vesta-ui.css -o dist/vesta-ui.css",
-    "minify:css": "postcss dist/vesta-ui.css -o dist/vesta-ui.min.css",
- "build": "webpack",
-  "watch": "webpack --watch"
-  },
+"scripts": {
+  "build": "if exist dist rmdir /s /q dist && mkdir dist && xcopy /E /I src dist",
+"start": "npx http-server ./ -p 0"
+}
+
+,
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "clean-css-cli": "^5.3.3",
-    "cpy-cli": "^4.1.0",
-    "cssnano": "^7.0.6",
-    "postcss": "^8.5.3",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^16.1.0",
-    "postcss-url": "^10.1.3",
-    "rimraf": "^5.0.1",
-    "ts-loader": "^9.5.2",
-    "typescript": "^5.8.2",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1"
+    
   },
   "dependencies": {
     "@types/jquery": "^3.5.32",
