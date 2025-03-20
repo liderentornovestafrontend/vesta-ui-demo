@@ -12,10 +12,12 @@ if (isWindows) {
     execSync("mkdir dist", { stdio: "inherit" });
     execSync("xcopy /E /I /Y src dist", { stdio: "inherit" });
     execSync("xcopy /E /I /Y demos dist\\demos", { stdio: "inherit" });
+    execSync("copy index.html dist\\index.html", { stdio: "inherit" }); 
 } else {
     execSync("rm -rf dist && mkdir -p dist", { stdio: "inherit" });
     execSync("cp -r src/* dist/", { stdio: "inherit" });
     execSync("cp -r demos/ dist/demos/", { stdio: "inherit" });
+    execSync("cp index.html dist/index.html", { stdio: "inherit" }); // ✅ Copia index.html en dist/
 }
 
 console.log("✅ Compilación completada.");
