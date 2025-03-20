@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Librería de UX/UI independiente de frameworks",
 "scripts": {
-  "build": "if exist dist rmdir /s /q dist && mkdir dist && xcopy /E /I src dist",
-"start": "npx http-server ./ -p 0"
+  "build": "if exist dist rmdir /s /q dist && mkdir dist && xcopy /E /I /Y src dist && xcopy /E /I /Y demos dist\\demos",
+  "update:icons": "if not exist dist\\icons mkdir dist\\icons && xcopy /E /I /Y src\\icons dist\\icons",
+  "start": "npx http-server ./ -p 0",
+  "deploy:dist": "cd dist && git add . && git commit -m 'Actualizando dist en GitHub' && git push origin main"
 }
 
 ,
@@ -16,3 +18,4 @@
     "jquery": "^3.7.1"
   }
 }
+ 
