@@ -91,13 +91,11 @@
     /*}*/
 
 
-    .xls_style-excel-table tfoot {
+    .xls_style-excel-table tfoot tr td{
         
-        
-
         position: sticky;
         bottom: 0;
-        background-color: #f0f0f0; /* Cambia el color de fondo del footer */
+        background-color: var(--Secondary400) !important; /* Cambia el color de fondo del footer */
         font-weight: bold;
     }
 
@@ -118,7 +116,7 @@
 .xls_style-excel-table th {
   background-color: var(--Primary100);
   border: 1px solid var(--success-color);
-  padding: 4px;
+  padding: 8px;
   text-align: left;
   margin-left: 4px;
   color: white;
@@ -217,7 +215,7 @@ th.th-graybkue {
     background-color: #c9dde1;
 }
 
-.xls_style-excel-table tr:hover td {
+.xls_style-excel-table tr:hover td  {
   
   background-color:var(--Secondary300);
   transition: background-color 0.3s, border-color 0.3s;
@@ -502,7 +500,7 @@ select:invalid {
 }
 
 /* Estilo para los campos de filtro */
-.filter-input {
+.xls_style-excel-table th input {
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #ccc;
