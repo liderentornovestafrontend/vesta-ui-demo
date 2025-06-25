@@ -717,7 +717,7 @@ select:invalid {
         display: inline-block;
         width: 20px; /* Ajusta el tamaño del icono según sea necesario */
         height: 20px; /* Ajusta el tamaño del icono según sea necesario */
-        background-image: url('../icons/box2.png'); /* Ruta a la imagen del icono */
+      
         /* Añade cualquier otra configuración necesaria para el icono */
     }
 
