@@ -4,89 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Tabla - Vesta UI</title>
-  
+    <link rel="stylesheet" href="../styles/vesta-ui.css">
     <link rel="stylesheet" href="../styles/component/xls_style.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
  
 </head>
-<body>
-    <h1>Ejemplo de Implementación de la Tabla Estilo Excel</h1>
-    <p>Este es un ejemplo de cómo utilizar la tabla con Grid CSS en tu proyecto.</p>
+<body style="background-color: rgb(35, 35, 35);padding: 16px;color: white;">
+    
+<div class="card-panel grey lighten-4 z-depth-1 regla-8-card">
+  <h1 class="black-text">Ejemplo de Implementación de la Tabla Estilo Excel</h1>
+  <p class="grey-text text-darken-3">
+    Este es un ejemplo de cómo utilizar la tabla con Grid CSS en tu proyecto.
+  </p>
 
-    <h2>Vista de la Tabla:</h2>
-    <div class="table-container">
-        <table class="xls_style-excel-table">
-            <thead class="fixed-header">
-                <tr>
-               
-                    <th style="width:3%; text-align: center;">#</th>
-                    <th style="width: 20%; text-align: center;">Consignatario</th>
-                    <th style="width: 10%; text-align: center;">F.Despacho</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="xls_father">
-                    <td class="toggle-row" style="width: 1rem; cursor: pointer;">
-                        <svg width="30" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 5v14l11-7z" fill="#004A7C"/>
-                        </svg>
-                        1
-                    </td>
-                  
-                    <td><input type="text" value="Proveedor XYZ" style="width:100%" disabled /></td>
-                    <td>2024-03-01</td>
-                </tr>
-                <tr class="detail-row" style="display: none;" class="xls_child">
-                    <td></td>
-                    <td class="xls_center" colspan="2">12345</td>
-                    <td colspan="5">Descripción del Producto</td>
-                </tr>
+  <h2 class="black-text">Vista de la Tabla:</h2>
+</div>
 
-                <tr class="xls_father">
-                    <td class="toggle-row" style="width: 1rem; cursor: pointer;">
-                        <svg width="30" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 5v14l11-7z" fill="#004A7C"/>
-                        </svg>
-                        2
-                    </td>
-                  
-                    <td><input type="text" value="Proveedor FRT" style="width:100%"  /></td>
-                    <td>2024-03-01</td>
-                </tr>
-                <tr class="detail-row" style="display: none;" class="xls_child">
-                    <td></td>
-                    <td class="xls_center" colspan="2">12345</td>
-                    <td colspan="5">Descripción del Producto</td>
-                </tr>
-            </tbody>
-        </table>`;
+    <div class="table-header">
+    <div class="title">
+        <button class="button mini-button cycle-button">
+            <span class="icon mif-loop2" style="color:forestgreen"></span>
+        </button>
+        Solicitudes de Despacho
     </div>
+
+     <img src="/icons/24/outline/magnifying-glass.svg" alt="Logo" width="24" height="24" />
+     <input type="text" placeholder="Buscar..." style="border: none; outline: none; flex: 1;" />
+       <img src="/icons/24/outline/cog-6-tooth.svg" alt="Logo" width="24" height="24" />
+ 
+</div>
+
+<div class="table-container">
+    <div class="header-background"></div>
+    <table class="xls_style-excel-table">
+        <thead class="fixed-header">
+            <tr>
+                <!-- <th> <i class="vesta-icon vesta-arrow-left-outline vesta-icon-3x"></i></th> -->
+                <th>#</th>
+                <th>Consignatario<br><input type="text" class="filter-input" value="Proveedor A"  /></th>
+                <th>F.Despacho<br><input type="text" class="filter-input" value="2025-06-24"  /></th>
+                <th>Contenedor<br><input type="text" class="filter-input" value="CONT-001"  /></th>
+                <th>Destino<br><input type="text" class="filter-input" value="Puerto Cortés"  /></th>
+                <th>Despacho<br><input type="text" class="filter-input" value="REF123"  /></th>
+                <th>Gestión<br><input type="text" class="filter-input" value="G001"  /></th>
+                <th>Cantidad<br><input type="text" class="filter-input" value="500" disabled /></th>
+                <th>UM<br><input type="text" class="filter-input" value="EA" disabled style="background-color:lightgray" /></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="xls_father">
+                <!-- <td><img src="images/metro-icon-down.png" width="40" /></td> -->
+                <td>1</td>
+                <td><input type="text" value="Proveedor A" disabled /></td>
+                <td>2025-06-24</td>
+                <td>CONT-001</td>
+                <td><input type="text" value="Puerto Cortés" disabled /></td>
+                <td>REF123</td>
+                <td>G001</td>
+                <td class="xls_number">500</td>
+                <td>EA</td>
+            </tr>
+            <tr class="xls_child">
+                <td></td>
+                <td class="xls_center" colspan="2">SKU-001</td>
+                <td colspan="4">Producto ejemplo</td>
+                <td class="xls_number">120</td>
+                <td>EA</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="xls_child">
+                <td colspan="2">1/1</td>
+                <td colspan="3">Seleccionados: 500</td>
+                <td colspan="3"></td>
+                <td>EA</td>
+              
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
 
     <h2>Código de la Tabla:</h2>
-    <div class="code-container">
-        <button class="copy-btn" onclick="copyCode(this)">Copiar Código</button>
-        <pre class="line-numbers"><code class="language-html">
-&lt;table class="xls_style-excel-table"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th class="xls_10P"&gt;ID&lt;/th&gt;
-            &lt;th class="xls_30P"&gt;Nombre&lt;/th&gt;
-            &lt;th class="xls_20P"&gt;Categoría&lt;/th&gt;
-            &lt;th class="xls_15P"&gt;Cantidad&lt;/th&gt;
-            &lt;th class="xls_20P"&gt;Precio&lt;/th&gt;
-        &lt;/tr&gt;
+<div class="code-container">
+  <button class="copy-btn" onclick="copyCode(this)">Copiar Código</button>
+  <pre class="line-numbers"><code class="language-html">
+&lt;div class="table-container"&gt;
+  &lt;div class="header-background"&gt;&lt;/div&gt;
+  &lt;table class="xls_style-excel-table"&gt;
+    &lt;thead class="fixed-header"&gt;
+      &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Consignatario&lt;br&gt;&lt;input type="text" class="filter-input" value="Proveedor A" /&gt;&lt;/th&gt;
+        &lt;th&gt;F.Despacho&lt;br&gt;&lt;input type="text" class="filter-input" value="2025-06-24" /&gt;&lt;/th&gt;
+        &lt;th&gt;Contenedor&lt;br&gt;&lt;input type="text" class="filter-input" value="CONT-001" /&gt;&lt;/th&gt;
+        &lt;th&gt;Destino&lt;br&gt;&lt;input type="text" class="filter-input" value="Puerto Cortés" /&gt;&lt;/th&gt;
+        &lt;th&gt;Despacho&lt;br&gt;&lt;input type="text" class="filter-input" value="REF123" /&gt;&lt;/th&gt;
+        &lt;th&gt;Gestión&lt;br&gt;&lt;input type="text" class="filter-input" value="G001" /&gt;&lt;/th&gt;
+        &lt;th&gt;Cantidad&lt;br&gt;&lt;input type="text" class="filter-input" value="500" disabled /&gt;&lt;/th&gt;
+        &lt;th&gt;UM&lt;br&gt;&lt;input type="text" class="filter-input" value="EA" disabled style="background-color:lightgray" /&gt;&lt;/th&gt;
+      &lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;001&lt;/td&gt;
-            &lt;td&gt;Producto A&lt;/td&gt;
-            &lt;td&gt;Electrónica&lt;/td&gt;
-            &lt;td class="xls_number"&gt;10&lt;/td&gt;
-            &lt;td class="xls_number"&gt;$150.00&lt;/td&gt;
-        &lt;/tr&gt;
+      &lt;tr class="xls_father"&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;input type="text" value="Proveedor A" disabled /&gt;&lt;/td&gt;
+        &lt;td&gt;2025-06-24&lt;/td&gt;
+        &lt;td&gt;CONT-001&lt;/td&gt;
+        &lt;td&gt;&lt;input type="text" value="Puerto Cortés" disabled /&gt;&lt;/td&gt;
+        &lt;td&gt;REF123&lt;/td&gt;
+        &lt;td&gt;G001&lt;/td&gt;
+        &lt;td class="xls_number"&gt;500&lt;/td&gt;
+        &lt;td&gt;EA&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="xls_child"&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td class="xls_center" colspan="2"&gt;SKU-001&lt;/td&gt;
+        &lt;td colspan="4"&gt;Producto ejemplo&lt;/td&gt;
+        &lt;td class="xls_number"&gt;120&lt;/td&gt;
+        &lt;td&gt;EA&lt;/td&gt;
+      &lt;/tr&gt;
     &lt;/tbody&gt;
-&lt;/table&gt;
-        </code></pre>
-    </div>
+    &lt;tfoot&gt;
+      &lt;tr class="xls_child"&gt;
+        &lt;td colspan="2"&gt;1/1&lt;/td&gt;
+        &lt;td colspan="3"&gt;Seleccionados: 500&lt;/td&gt;
+        &lt;td colspan="3"&gt;&lt;/td&gt;
+        &lt;td&gt;EA&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tfoot&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+  </code></pre>
+</div>
+
 
     <script>
         function copyCode(button) {
@@ -97,5 +148,9 @@
         }
     </script>
        <script src="../src/components/table/tablexls.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
+
 </body>
 </html>

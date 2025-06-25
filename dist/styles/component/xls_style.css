@@ -1,29 +1,32 @@
-
 @import "../base/variables.css";
-table {
-    border: none;
-    border-collapse: collapse; /* Asegura que no haya separación de bordes */
-}
-
-th, td {
-    border: none;
-}
-
-
 /* Excel Style Table */
 .table-container {
     width: 100%;
     height: 24rem; /* Ajusta el alto deseado para el contenedor */
     min-height: 24rem;
     overflow: auto;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .xls_style-excel-table {
-    width: 100%;
-
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  border-collapse: collapse;
+ border-spacing: 0;
+  border-radius: 4px;
 }
+
+  .xls_style-excel-table,
+  .xls_style-excel-table th,
+  .xls_style-excel-table td,
+  .xls_style-excel-table input,
+  .xls_style-excel-table select,
+  .xls_style-excel-table textarea {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+  }
+
+
 
 .xls_text {
     font-size:large;
@@ -77,7 +80,7 @@ th, td {
 
 
     .xls_item td input {
-        max-width: 60px;
+        max-width: 56px;
     }
 
     /*.xls_style-excel-table tbody {
@@ -102,9 +105,9 @@ th, td {
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: #2980BA; /* Color de fondo para los encabezados */
+    background-color: var(--Primary100); /* Color de fondo para los encabezados */
     color: white; /* Color de texto para los encabezados */
-    border: 1px solid #ddd;
+  
 
 }
 
@@ -112,40 +115,28 @@ th, td {
     border: 1px solid #ddd; /* Añade los bordes a los encabezados */
 }
 
-.xls_style-excel-tableOld th {
-    background-color: var(--Primary700);
-    border: 1px solid #ddd;
-    padding: 4px;
-    text-align: center;
-    color: white;
-    font-family: 'Roboto Flex', sans-serif;
-    font-size: 14px;
-    font-weight: 100;
-    z-index: 3; /* Coloca el div detrás del thead */
-}
-
 .xls_style-excel-table th {
-    background-color: var(--Primary700);
-    border: 1px solid #ddd;
-    padding: var(--padding-xs); /* 4px siguiendo la regla de 8 */
-    text-align: center;
-    color: white;
-
-    font-family: var(--highlight-font-family);
-    font-size: var(--highlight-s); /* 14px según la variable de Highlight S */
-    font-weight: var(--highlight-font-weight); /* Mantiene el peso estándar definido */
-
-    z-index: 3; /* Coloca el div detrás del thead */
+  background-color: var(--Primary100);
+  border: 1px solid var(--success-color);
+  padding: 4px;
+  text-align: left;
+  margin-left: 4px;
+  color: white;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 14px;
+  font-weight: 1100;
+  
+  z-index: 3; /* Coloca el div detrás del thead */
 }
-
-
 
 th.th-graybkue {
-  background-color: #3f4f58; /* Hereda automáticamente el color del th */
+  background-color: var(--Primary100);
+
 }
 
-.xls_style-excel-table.th_bluegray th {
-  background-color: #3f4f58 !important; /* Gris azulado */
+.xls_style-excel-table .th_bluegray th {
+ 
+  background-color: var(--Primary100);
 }
 
 
@@ -158,14 +149,11 @@ th.th-graybkue {
 }
 
 .xls_style-excel-table td {
-    border: 1px solid #ddd;
-    padding: var(--padding-xs); /* 4px según la regla de 8 */
-    
-    font-family: var(--highlight-font-family);
-    font-weight: var(--highlight-font-weight);
-    font-size: var(--highlight-s);
-
-   
+  border: 1px solid #ddd;
+  background-color: white;
+  padding: 4px;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 14px;
 }
 
 .xls_father {
@@ -216,22 +204,23 @@ th.th-graybkue {
 }
 
 .xls_style-excel-table td:hover {
-    /*        border: 1px solid #70ad47;
-        transition: border-color 0.3s;*/
+           /* border: 1px solid #70ad47;
+        transition: border-color 0.3s; */
 }
 
 .excel_selected {
-    border: 1px solid #70ad47;
-    background-color: #c9dde1;
+    border: 1px solid var(--Primary100);
+    background-color: var(--Primary100);
 }
 .ValidacionCheck {
-    border: 1px solid #70ad47;
+    border: 1px solid var(--success-color);
     background-color: #c9dde1;
 }
 
-.xls_style-excel-table tr:hover {
-    border: 1px solid #70ad47;
-    background-color: #e0f4da;
+.xls_style-excel-table tr:hover td {
+  
+  background-color:var(--Secondary300);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .custom-file-upload {
@@ -285,7 +274,7 @@ tr:nth-child(even) {
 
 
     .mytable th {
-        background-color: #2980BA;
+        background-color: var(--Primary100);
         color: aliceblue;
         font-family: math;
     }
@@ -333,10 +322,16 @@ tr:nth-child(even) {
 }
 
 input {
-    padding: .07rem;
-    font-family: "Roboto Flex", sans-serif;
-    font-size: unset;
+    padding: 4px !important;
+    font-family: Roboto, sans-serif !important;
+    font-size: 14px;
 }
+input[disabled] {
+  background-color: #f0f0f0; /* gris claro */
+  color: #555;               /* texto atenuado */
+  cursor: not-allowed;
+}
+
 
 textarea {
     padding: .05rem;
@@ -514,6 +509,8 @@ select:invalid {
     padding: 4px;
     font-family: "Calibri", sans-serif;
     font-size: 14px;
+    border-radius: 4px;
+    margin-top: 4px;
 }
 
 /* Estilo para los campos de filtro en la fila de encabezados */
@@ -550,7 +547,7 @@ select:invalid {
     left: 0;
     width: 100%;
     height: 1px; /* Ajusta la altura del thead */
-    background-color: white; /* Color de fondo blanco */
+    background-color: var(--Primary100); /* Color de fondo blanco */
     z-index: 2; /* Coloca el div detrás del thead */
 }
 
@@ -568,11 +565,17 @@ select:invalid {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1565C0;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 5px;
     font-size: 18px;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+      padding: 8px 16px;
+
+   border-radius: 4px 4px 0px 0px; /* completamente redondeado */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* sombra suave */
+
 }
 
 .title {
@@ -716,7 +719,7 @@ select:invalid {
         display: inline-block;
         width: 20px; /* Ajusta el tamaño del icono según sea necesario */
         height: 20px; /* Ajusta el tamaño del icono según sea necesario */
-   
+        background-image: url('../icons/box2.png'); /* Ruta a la imagen del icono */
         /* Añade cualquier otra configuración necesaria para el icono */
     }
 
@@ -968,3 +971,8 @@ select:invalid {
 
 
 
+.regla-8-card {
+  padding: 16px;          /* Múltiplo de 8 */
+  margin-bottom: 24px;    /* Separación con lo siguiente */
+  border-radius: 8px;     /* Bordes redondeados suaves */
+}

@@ -1,7 +1,7 @@
 @import url('variables.css'); /* Importa variables de color y espaciado */
 
 /* Botones */
-button {
+.form-vesta button {
     font-family: "Roboto Flex", sans-serif;
     font-weight: bold;
     text-align: center;
@@ -13,7 +13,7 @@ button {
     transition: background 0.3s ease-in-out;
 }
 
-button:hover {
+.form-vesta button:hover {
     background-color: #469ad6;
 }
 
@@ -39,7 +39,7 @@ button:hover {
 /* Iconos */
 
 /* Inputs */
-input {
+.form-vesta  input {
     width: 296px;
     height: 40px;
     /* border-radius: var(--border-radius-m); */
@@ -52,13 +52,13 @@ input {
     font-size: 14px;
 }
 
-.input:focus {
+.form-vesta  .input:focus {
     outline: none;
     border-color: #469ad6;
 }
 
 /* Select */
-select {
+.form-vesta  select {
     width: 204px;
     height: 36px;
     min-height: 36px;
